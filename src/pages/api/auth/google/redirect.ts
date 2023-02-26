@@ -62,7 +62,7 @@ const resolver = async (req: NextApiRequest, res: NextApiResponse) => {
     code,
     process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
     process.env.GOOGLE_CLIENT_SECRET,
-    "http://localhost:3000/api/auth/google/redirect"
+    "https://intuition-auto-track.vercel.app/api/auth/google/redirect"
   );
   try {
     const response = await axios.get(
@@ -155,7 +155,7 @@ const resolver = async (req: NextApiRequest, res: NextApiResponse) => {
         if (err) throw err;
         return res
           .redirect(
-            `http://localhost:3000/google/success?token=${token}`
+            `https://intuition-auto-track.vercel.app/google/success?token=${token}`
             //   `https://hack-n-roll-374701.web.app/google/success?token=${token}`
           )
           .send("success");
@@ -178,7 +178,7 @@ const resolver = async (req: NextApiRequest, res: NextApiResponse) => {
         if (err) throw err;
         return res
           .redirect(
-            `http://localhost:3000/google/success?token=${token}`
+            `https://intuition-auto-track.vercel.app/google/success?token=${token}`
             //   `https://hack-n-roll-374701.web.app/google/success?token=${token}`
           )
           .send("nice");

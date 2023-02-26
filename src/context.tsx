@@ -4,7 +4,7 @@ import querystring from "querystring";
 function getGoogleAuthURL() {
   const rootUrl = "https://accounts.google.com/o/oauth2/v2/auth";
   const options = {
-    redirect_uri: `http://localhost:3000/api/auth/google/redirect`,
+    redirect_uri: `https://intuition-auto-track.vercel.app/api/auth/google/redirect`,
     client_id: process.env.NEXT_PUBLIC_GOOGLE_CLIENT_ID,
     access_type: "offline",
     response_type: "code",
