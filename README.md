@@ -37,7 +37,7 @@
 <h3 align="center">AutoTrack!</h3>
 
   <p align="left">
-    [Visit the web app!](https://hack-n-roll-374701.web.app/) Scraping Gmail to retrieve receipts for the purpose of recording the transactions through our web app. The data will be collated and presented comprehensibly in our web app. Due to time constraints, we currently only take in PayLah. However, in future implementations, we do intend to expand and be more inclusive of payment via other apps. Thus, enabling us in better accommodating our users. Overall, our goal is to make budget tracking as effortless and accurate as possible for our users.
+    [Visit the web app!](https://intuition-auto-track.vercel.app/) Scraping Gmail to retrieve receipts for the purpose of recording the transactions through our web app. The data will be collated and presented comprehensibly in our web app. Due to time constraints, we currently only take in PayLah. However, in future implementations, we do intend to expand and be more inclusive of payment via other apps. Thus, enabling us in better accommodating our users. Overall, our goal is to make budget tracking as effortless and accurate as possible for our users.
   </p>
 </div>
 
