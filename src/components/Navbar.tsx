@@ -23,15 +23,16 @@ const Navbar = () => {
   const { setMode, getGoogleAuthURL } = useGlobalContext();
   const isMobile = useMediaQuery("(max-width: 600px)");
   const theme = useTheme();
-  const { user } = useAuth(undefined);
+  const { user, isLoading } = useAuth(undefined);
   const [open, setOpen] = React.useState(false);
   React.useEffect(() => {
+    if (isLoading) return;
     if (localStorage.getItem("hasViewedIntro") === "true" && user) {
       setOpen(false);
     } else {
       setOpen(true);
     }
-  }, [user]);
+  }, [user, isLoading]);
   return (
     <>
       <AppBar

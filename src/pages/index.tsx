@@ -335,6 +335,10 @@ const Home: NextPage = () => {
               disabled={isAdding}
               onClick={(e) => {
                 e.preventDefault();
+                if (isNaN(parseFloat(amount))) {
+                  window.alert("Please enter a number for amount");
+                  return;
+                }
                 mutate({
                   amount: parseFloat(amount),
                   to: to,
