@@ -31,7 +31,7 @@ const isAuthorized = t.middleware(async ({ ctx, next }) => {
   if (!token) {
     throw new TRPCError({ code: "BAD_REQUEST" });
   }
-  const user_id = await jwt?.verify(token, process.env.JWT_SECRET);
+  const user_id = await jwt?.decode(token, process.env.JWT_SECRET);
   if (!user_id) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
