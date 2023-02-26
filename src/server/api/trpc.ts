@@ -35,7 +35,7 @@ const isAuthorized = t.middleware(async ({ ctx, next }) => {
   if (!user_id) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
-  const user = await Users.findById(user_id);
+  const user = await Users.findById(user_id.user.id);
   if (!user) {
     throw new TRPCError({ code: "UNAUTHORIZED" });
   }
