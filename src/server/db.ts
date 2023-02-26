@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import mongoose from "mongoose";
 
 import { env } from "../env.mjs";
 
@@ -12,3 +13,12 @@ export const prisma =
   });
 
 if (env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
+
+mongoose
+  .connect(process.env.DATABASE_URL)
+  .then(() => {
+    console.log("MongoDB connected");
+  })
+  .catch((err) => {
+    console.log(err);
+  });

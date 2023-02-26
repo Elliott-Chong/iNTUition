@@ -20,5 +20,13 @@ const config = {
     locales: ["en"],
     defaultLocale: "en",
   },
+  modularizeImports: {
+    "@mui/icons-material": {
+      transform: "@mui/icons-material/{{member}}",
+    },
+  },
+  images: {
+    domains: ["raw.githubusercontent.com"],
+  },
 };
 export default config;
